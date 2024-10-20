@@ -18,8 +18,8 @@ setwd(save.wd)
  if(j=='b') {tree=get(paste0(toupper(j),'phy')); 
 	comm=BAC_COM[match(rownames(envs),rownames(BAC_COM)),]; comm=na.omit(comm); comm=comm[,colSums(comm)>1]
 	clas=BAC.tax} else {tree=get(paste0(toupper(j),'phy')); 
-	comm=EUK_COM[match(rownames(envs),rownames(EUK_COM)),]; comm=na.omit(comm); comm=comm[,colSums(comm)>1]
-	clas=EUK.tax
+	comm=microEUK_COM[match(rownames(envs),rownames(microEUK_COM)),]; comm=na.omit(comm); comm=comm[,colSums(comm)>1]
+	clas=microEUK.tax
 	}
 	
 	sampid.check=match.name(rn.list=list(comm=comm,treat=treat,env=env))
